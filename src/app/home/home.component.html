@@ -1,0 +1,28 @@
+<div class="container w-75">
+    <table class='table table-hover'>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Price</td>
+                <td>Units</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let prod of prods'>
+                <td>{{ prod.id }}</td>
+                <td>{{ prod.name }}</td>
+                <td>{{ prod.description }}</td>
+                <td>${{ prod.price }}</td>
+                <td>{{ prod.units }}</td>
+                <td><button routerLink="/editprod/{{prod._id}}" id="edit_btn">Edit</button></td>
+                <td><button (click)="deleteProd(prod)" id="delete_btn">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button routerLink="/addprod" class="w-25 float-left" id="bottom_btn">Add Product</button>
+    <button (click)="deleteAll()" class="w-25 float-right" id="bottom_btn">Reset Data</button>
+</div>

@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+#bottom_btn{
+    background-color: #b7d4ab;
+    border:none;
+    outline:none;
+    margin-left: 3em;
+    margin-right: 3em;
+    padding: 5px;
+}
+#bottom_btn:focus{
+    border:none;
+    outline:none;
+}
+#delete_btn, #edit_btn{
+    background-color: transparent;
+    border:none;
+    outline:none;
+    margin-left: 3em;
+    margin-right: 3em;
+    padding: 5px;
+}
+#delete_btn:hover{
+    color: red;
+}
+#edit_btn:hover{
+    color: blue;
+}
+#submit_btn{
+    background-color: #b7d4ab;
+    border:none;
+    outline:none;
+    padding: 5px;
+}
