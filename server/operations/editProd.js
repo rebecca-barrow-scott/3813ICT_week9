@@ -10,8 +10,8 @@ module.exports = function(db, app, ObjectID){
     }
         var objectid = new ObjectID(prod.mdb_id)
         var newdata = {id: prod.id, name: prod.name, description: prod.description, price: prod.price, units: prod.units}
-        db.collection('products').updateOne({_id: objectid}, {$set: newdata}, ()=>{
-            res.send({"feedback": null});
+        db.collection('products').updateOne({id: req.body.id}, {$set: newdata}, ()=>{
+            res.send({"feedback": "successfully updated"});
         })
     });
 }

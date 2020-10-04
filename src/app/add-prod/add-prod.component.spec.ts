@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs'; 
+import { ProdService } from '../prod.service';
 
 import { AddProdComponent } from './add-prod.component';
 

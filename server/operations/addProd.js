@@ -8,7 +8,7 @@ module.exports = function(db, app){
             units: req.body.units
         }
         db.collection('products').insertOne(prod, function(err, result){
-            res.send({'feeback': null})
+            res.send(prod)
         });
     })
 };
